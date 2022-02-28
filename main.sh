@@ -15,6 +15,8 @@ git clone --depth 1 https://github.com/esirplayground/LingTiGameAcc
 git clone --depth 1 https://github.com/esirplayground/luci-app-LingTiGameAcc
 git clone --depth 1 https://github.com/jefferymvp/luci-app-koolproxyR
 git clone --depth 1 https://github.com/destan19/OpenAppFilter && mvdir OpenAppFilter
+git clone --depth 1 https://github.com/Dawneng/luci-theme-atmaterial
+git clone --depth 1 https://github.com/sirpdboy/luci-theme-opentopd
 git clone -b 18.06 --depth 1 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
 git clone --depth 1 https://github.com/sundaqiang/openwrt-packages && mv -n openwrt-packages/luci-* ./; rm -rf openwrt-packages
@@ -28,9 +30,7 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-aliddns
 svn co https://github.com/sirpdboy/netspeedtest/trunk/luci-app-netspeedtest
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-koolddns
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-theme-atmaterial
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-theme-ifit
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-theme-opentopd
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-control-timewol
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-control-webrestriction
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-control-weburl
