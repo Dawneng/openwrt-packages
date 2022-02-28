@@ -16,14 +16,15 @@ git clone --depth 1 https://github.com/esirplayground/luci-app-LingTiGameAcc
 git clone --depth 1 https://github.com/jefferymvp/luci-app-koolproxyR
 git clone --depth 1 https://github.com/destan19/OpenAppFilter && mvdir OpenAppFilter
 git clone --depth 1 https://github.com/Dawneng/luci-theme-atmaterial
-git clone --depth 1 https://github.com/sirpdboy/luci-theme-opentopd
+git clone --depth 1 https://github.com/sirpdboy/luci-theme-opentopd && rm -rf luci-theme-opentopd/doc
 git clone -b 18.06 --depth 1 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
 git clone --depth 1 https://github.com/sundaqiang/openwrt-packages && mv -n openwrt-packages/luci-* ./; rm -rf openwrt-packages
+git clone -b dev --depth 1 https://github.com/vernesong/OpenClash && mv -n OpenClash/luci-app-openclash ./;rm -rf OpenClash
 
 
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
-svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+#svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 svn co https://github.com/kenzok8/jell/trunk/luci-app-adguardhome
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-fileassistant
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced
@@ -38,6 +39,8 @@ svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-kodexplorer
 
 mv -n openwrt-passwall/* ./ ; rm -Rf openwrt-passwall
 
+rm -rf ./*/Screenshots
 rm -rf ./*/.git & rm -f ./*/.gitattributes
+rm -rf ./*/*.md
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 exit 0
