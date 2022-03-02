@@ -36,6 +36,7 @@ svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-control-timewol
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-control-webrestriction
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-control-weburl
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-kodexplorer
+svn co https://github.com/Dawneng/old-packages/trunk/kcptun
 
 mv -n openwrt-passwall/* ./ ; rm -Rf openwrt-passwall
 
