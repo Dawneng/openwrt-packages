@@ -8,7 +8,15 @@ git clone --depth 1 https://github.com/kiddin9/openwrt-bypass && mvdir openwrt-b
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall
 git clone -b 18.06 --depth 1 https://github.com/kiddin9/luci-theme-edge
 git clone --depth 1 https://github.com/jerrykuku/luci-app-vssr
-git clone --depth 1 https://github.com/hubbylei/luci-app-clash
+git clone --depth 1 https://github.com/Dawneng/luci-app-clash
+git clone --depth 1 https://github.com/ysc3839/luci-proto-minieap
+git clone --depth 1 https://github.com/rufengsuixing/luci-app-onliner
+git clone --depth 1 https://github.com/riverscn/openwrt-iptvhelper
+git clone --depth 1 https://github.com/BoringCat/luci-app-mentohust
+git clone --depth 1 https://github.com/kuoruan/luci-app-kcptun
+git clone --depth 1 https://github.com/jerrykuku/luci-app-ttnode
+git clone --depth 1 https://github.com/jerrykuku/luci-app-jd-dailybonus
+git clone --depth 1 https://github.com/esirplayground/luci-app-poweroff
 git clone --depth 1 https://github.com/zzsj0928/luci-app-pushbot
 git clone -b lede https://github.com/pymumu/luci-app-smartdns
 git clone --depth 1 https://github.com/esirplayground/LingTiGameAcc

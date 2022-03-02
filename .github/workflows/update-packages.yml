@@ -4,9 +4,9 @@ name: Update packages
 
 on:
   workflow_dispatch:
-#  push:
-#    paths: 
-#      - 'main.sh'
+  push:
+    paths: 
+      - 'main.sh'
       
 #  schedule:
 #    - cron:  '0 23 * * *'
