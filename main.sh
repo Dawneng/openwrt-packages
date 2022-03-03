@@ -8,7 +8,7 @@ git clone --depth 1 https://github.com/kiddin9/openwrt-bypass && mvdir openwrt-b
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall
 git clone -b 18.06 --depth 1 https://github.com/kiddin9/luci-theme-edge
 git clone --depth 1 https://github.com/jerrykuku/luci-app-vssr
-git clone --depth 1 https://github.com/Dawneng/luci-app-clash
+git clone --depth 1 https://github.com/frainzy1477/luci-app-clash
 git clone --depth 1 https://github.com/ysc3839/luci-proto-minieap
 git clone --depth 1 https://github.com/rufengsuixing/luci-app-onliner
 git clone --depth 1 https://github.com/riverscn/openwrt-iptvhelper
