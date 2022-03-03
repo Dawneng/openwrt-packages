@@ -92,7 +92,7 @@ update(){
 			 echo "  ${LOGTIME} - 开始下载 Clash 内核..." >$LOG_FILE
 		elif [ $lang == "en" ] || [ $lang == "auto" ];then
 			 echo "  ${LOGTIME} - Starting Clash Core download" >$LOG_FILE
-		fi				
+		fi
 	   if [ $CORETYPE -eq 1 ];then
 		wget --no-check-certificate  https://github.com/frainzy1477/clash_dev/releases/download/"$CLASHVER"/clash-"$MODELTYPE".gz -O 2>&1 >1 /tmp/clash.gz
 	   elif [ $CORETYPE -eq 3 ];then 

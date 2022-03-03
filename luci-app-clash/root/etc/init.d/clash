@@ -93,7 +93,7 @@ elif [ ! -f "$CONFIG_YAML_PATH" ] && [ ! -f "$CONFIG_YAML" ];then
 		if [ "${lang}" == "en" ] || [ $lang == "auto" ];then
 			echo "No config found" >$REAL_LOG 
 		elif [ "${lang}" == "zh_cn" ];then
-			echo "找不到配置文章" >$REAL_LOG
+			echo "找不到配置文件" >$REAL_LOG
 		fi
 		sleep 5
 		echo "Clash for OpenWRT" >$REAL_LOG
@@ -308,10 +308,10 @@ rules(){
 			iptables -t nat -A clash -m set --match-set china dst -j RETURN			
 			iptables -t nat -A clash -p tcp -j REDIRECT --to-ports "${redir_port}"
 			iptables -t nat -I PREROUTING -p tcp -d 8.8.8.8 -j REDIRECT --to-ports "${redir_port}"
-			iptables -t nat -I PREROUTING -p tcp -d 8.8.4.4 -j REDIRECT --to-ports "${redir_port}"			
+			iptables -t nat -I PREROUTING -p tcp -d 8.8.4.4 -j REDIRECT --to-ports "${redir_port}"
            	iptables -t nat -A PREROUTING -p tcp -j clash
 
-				
+
 			ip rule add fwmark "$PROXY_FWMARK" table "$PROXY_ROUTE_TABLE"
 			ip route add local 0.0.0.0/0 dev lo table "$PROXY_ROUTE_TABLE"			
 			iptables -t mangle -N clash
@@ -747,7 +747,7 @@ remove_mark(){
 		  iptables -t nat -D PREROUTING "$pre_line" >/dev/null 2>&1
 	   done
 
-	   
+
 		iptables -t nat -D PREROUTING -p tcp --dport 53 -j ACCEPT >/dev/null 2>&1
 		iptables -t nat -D PREROUTING -p udp --dport 53 -j DNAT --to "127.0.0.1:$dns_port"
 
