@@ -60,8 +60,8 @@ jobs:
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         Emoji=("🎉" "🤞" "✨" "🎁" "🎈" "🎄" "🎨" "💋" "🍓" "🍕" "🍉" "💐" "🌴" "🚀" "🛸" "🗽" "⛅" "🌈" "🔥" "⛄" "🐶" "🏅" "🦄" "🐤")
         git add .
-        git commit -m "${Emoji[$[$RANDOM % ${#Emoji[@]}]]} update $(TZ='Asia/Shanghai' date +%Y-%m-%d" "%H:%M:%S)"
-        git push --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/Dawneng/openwrt-packages.git" HEAD:${{matrix.target}}
+        git commit -m "${Emoji[$[$RANDOM % ${#Emoji[@]}]]} update $(TZ='Asia/Shanghai' date +%Y-%m-%d" "%H:%M:%S)" || echo 'Nothing to do.'
+        git push --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/Dawneng/openwrt-packages.git" HEAD:${{matrix.target}} || echo 'Nothing to do.'
         
         
     - name: Delete workflow runs
