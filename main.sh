@@ -40,7 +40,7 @@ svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-fileassistant
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-aliddns
 svn co https://github.com/sirpdboy/netspeedtest/trunk/luci-app-netspeedtest
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-koolddns
+svn co https://github.com/Dawneng/old-packages/trunk/luci-app-koolddns
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-theme-ifit
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-control-timewol
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-control-webrestriction
