@@ -17,6 +17,7 @@ git clone --depth 1 https://github.com/kuoruan/luci-app-kcptun
 git clone --depth 1 https://github.com/jerrykuku/luci-app-ttnode
 git clone --depth 1 https://github.com/jerrykuku/luci-app-jd-dailybonus
 git clone --depth 1 https://github.com/esirplayground/luci-app-poweroff
+git clone --depth 1 https://github.com/tty228/luci-app-serverchan
 git clone --depth 1 https://github.com/zzsj0928/luci-app-pushbot
 git clone -b lede https://github.com/pymumu/luci-app-smartdns
 git clone --depth 1 https://github.com/esirplayground/LingTiGameAcc
