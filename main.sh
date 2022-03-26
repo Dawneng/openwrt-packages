@@ -30,8 +30,8 @@ git clone -b 18.06 --depth 1 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
 git clone --depth 1 https://github.com/sundaqiang/openwrt-packages && mv -n openwrt-packages/luci-* ./; rm -rf openwrt-packages
 git clone -b dev --depth 1 https://github.com/vernesong/OpenClash && mv -n OpenClash/luci-app-openclash ./;rm -rf OpenClash
-git clone -b packages --depth 1 https://github.com/xiaorouji/openwrt-passwall && mv -n openwrt-passwall/* ./ ; rm -Rf openwrt-passwall
-git clone -b luci --depth 1 https://github.com/xiaorouji/openwrt-passwall && mv -n openwrt-passwall/* ./ ; rm -Rf openwrt-passwall
+git clone -b packages --depth 1 https://github.com/xiaorouji/openwrt-passwall && mv -n openwrt-passwall/* ./ ; rm -rf openwrt-passwall
+git clone -b luci --depth 1 https://github.com/xiaorouji/openwrt-passwall && mv -n openwrt-passwall/* ./ ; rm -rf openwrt-passwall
 
 
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
