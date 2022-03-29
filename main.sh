@@ -1,4 +1,15 @@
 #!/bin/bash
+function git_sparse_clone() {
+branch="$1" rurl="$2" localdir="$3" && shift 3
+git clone -b $branch --depth 1 --filter=blob:none --sparse $rurl $localdir
+cd $localdir
+git sparse-checkout init --cone
+git sparse-checkout set $@
+mv -n $@ ../
+cd ..
+rm -rf $localdir
+}
+
 function mvdir() {
 mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
@@ -32,6 +43,7 @@ git clone --depth 1 https://github.com/sundaqiang/openwrt-packages && mv -n open
 git clone -b dev --depth 1 https://github.com/vernesong/OpenClash && mv -n OpenClash/luci-app-openclash ./;rm -rf OpenClash
 git clone -b packages --depth 1 https://github.com/xiaorouji/openwrt-passwall && mv -n openwrt-passwall/* ./ ; rm -rf openwrt-passwall
 git clone -b luci --depth 1 https://github.com/xiaorouji/openwrt-passwall && mv -n openwrt-passwall/* ./ ; rm -rf openwrt-passwall
+git clone --depth 1 https://github.com/Dawneng/openwrt-subconverter && mv -n openwrt-subconverter/* ./ ; rm -rf openwrt-subconverter
 
 
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
@@ -49,7 +61,8 @@ svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-control-weburl
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-kodexplorer
 svn co https://github.com/Dawneng/old-packages/trunk/kcptun
 
-mv -n openwrt-passwall/* ./ ; rm -Rf openwrt-passwall
+mv -n openwrt-passwall/* ./ ; rm -rf openwrt-passwall
+mv -n openwrt-package/* ./ ; rm -rf openwrt-package
 
 rm -rf ./*/Screenshots
 rm -rf ./*/.git & rm -f ./*/.gitattributes
