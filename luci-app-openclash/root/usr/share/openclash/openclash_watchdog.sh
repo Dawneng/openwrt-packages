@@ -42,6 +42,10 @@ do
    stream_auto_select_tvb_anywhere=$(uci -q get openclash.config.stream_auto_select_tvb_anywhere || echo 0)
    stream_auto_select_prime_video=$(uci -q get openclash.config.stream_auto_select_prime_video || echo 0)
    stream_auto_select_ytb=$(uci -q get openclash.config.stream_auto_select_ytb || echo 0)
+   stream_auto_select_dazn=$(uci -q get openclash.config.stream_auto_select_dazn || echo 0)
+   stream_auto_select_paramount_plus=$(uci -q get openclash.config.stream_auto_select_paramount_plus || echo 0)
+   stream_auto_select_discovery_plus=$(uci -q get openclash.config.stream_auto_select_discovery_plus || echo 0)
+   
    enable=$(uci -q get openclash.config.enable)
 
 if [ "$enable" -eq 1 ]; then
@@ -173,6 +177,18 @@ fi
             if [ "$stream_auto_select_tvb_anywhere" -eq 1 ]; then
                LOG_OUT "Tip: Start Auto Select Proxy For TVB Anywhere+ Unlock..."
                /usr/share/openclash/openclash_streaming_unlock.lua "TVB Anywhere+" >> $LOG_FILE
+            fi
+            if [ "$stream_auto_select_dazn" -eq 1 ]; then
+               LOG_OUT "Tip: Start Auto Select Proxy For DAZN Unlock..."
+               /usr/share/openclash/openclash_streaming_unlock.lua "DAZN" >> $LOG_FILE
+            fi
+            if [ "$stream_auto_select_paramount_plus" -eq 1 ]; then
+               LOG_OUT "Tip: Start Auto Select Proxy For Paramount Plus Unlock..."
+               /usr/share/openclash/openclash_streaming_unlock.lua "Paramount Plus" >> $LOG_FILE
+            fi
+            if [ "$stream_auto_select_discovery_plus" -eq 1 ]; then
+               LOG_OUT "Tip: Start Auto Select Proxy For Discovery Plus Unlock..."
+               /usr/share/openclash/openclash_streaming_unlock.lua "Discovery Plus" >> $LOG_FILE
             fi
          fi
       fi

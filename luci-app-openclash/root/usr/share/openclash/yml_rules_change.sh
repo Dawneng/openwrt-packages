@@ -203,12 +203,21 @@ yml_other_set()
       'PROCESS-NAME,qbittorrent,DIRECT',
       'PROCESS-NAME,Thunder,DIRECT',
       'PROCESS-NAME,Transmission,DIRECT',
+      'PROCESS-NAME,transmission,DIRECT',
       'PROCESS-NAME,uTorrent,DIRECT',
       'PROCESS-NAME,WebTorrent,DIRECT',
       'PROCESS-NAME,WebTorrent Helper,DIRECT',
       'PROCESS-NAME,v2ray,DIRECT',
-      'PROCESS-NAME,ss-loca,DIRECT',
+      'PROCESS-NAME,ss-local,DIRECT',
+      'PROCESS-NAME,ssr-local,DIRECT',
+      'PROCESS-NAME,ss-redir,DIRECT',
+      'PROCESS-NAME,ssr-redir,DIRECT',
+      'PROCESS-NAME,ss-server,DIRECT',
+      'PROCESS-NAME,trojan-go,DIRECT',
+      'PROCESS-NAME,xray,DIRECT',
+      'PROCESS-NAME,hysteria,DIRECT',
       'PROCESS-NAME,UUBooster,DIRECT',
+      'PROCESS-NAME,uugamebooster,DIRECT',
       'DOMAIN-SUFFIX,smtp,DIRECT'
       )
       match_group=Value['rules'].grep(/(MATCH|FINAL)/)[0]
@@ -306,6 +315,8 @@ yml_other_rules_get()
    config_get "Domestic" "$section" "Domestic" ""
    config_get "Others" "$section" "Others" ""
    config_get "GoogleFCM" "$section" "GoogleFCM" "DIRECT"
+   config_get "Discovery" "$section" "Discovery" "$GlobalTV"
+   config_get "DAZN" "$section" "DAZN" "$GlobalTV"
 }
 
 if [ "$1" != "0" ]; then
@@ -351,6 +362,8 @@ if [ "$1" != "0" ]; then
 	 || [ -z "$(grep -F "$Scholar" /tmp/Proxy_Group)" ]\
 	 || [ -z "$(grep -F "$Netflix" /tmp/Proxy_Group)" ]\
 	 || [ -z "$(grep -F "$Disney" /tmp/Proxy_Group)" ]\
+	 || [ -z "$(grep -F "$Discovery" /tmp/Proxy_Group)" ]\
+	 || [ -z "$(grep -F "$DAZN" /tmp/Proxy_Group)" ]\
 	 || [ -z "$(grep -F "$Spotify" /tmp/Proxy_Group)" ]\
 	 || [ -z "$(grep -F "$Steam" /tmp/Proxy_Group)" ]\
 	 || [ -z "$(grep -F "$AdBlock" /tmp/Proxy_Group)" ]\
@@ -397,6 +410,8 @@ if [ "$1" != "0" ]; then
        	    .gsub(/,Bahamut,Global TV$/, ',Bahamut,$Bahamut#d')
        	    .gsub(/,HBO Max,Global TV$/, ',HBO Max,$HBOMax#d')
        	    .gsub(/,HBO Go,Global TV$/, ',HBO Go,$HBOGo#d')
+       	    .gsub(/,Discovery Plus,Global TV$/, ',Discovery Plus,$Discovery#d')
+       	    .gsub(/,DAZN,Global TV$/, ',DAZN,$DAZN#d')
        	    .gsub(/,Pornhub,Global TV$/, ',Pornhub,$Pornhub#d')
        	    .gsub(/,Global TV$/, ',$GlobalTV#d')
        	    .gsub(/,Asian TV$/, ',$AsianTV#d')
@@ -422,6 +437,8 @@ if [ "$1" != "0" ]; then
        	    .gsub!(/\"Bahamut\": \"Global TV\"/,'\"Bahamut\": \"$Bahamut#d\"')
        	    .gsub!(/\"HBO Max\": \"Global TV\"/,'\"HBO Max\": \"$HBOMax#d\"')
        	    .gsub!(/\"HBO Go\": \"Global TV\"/,'\"HBO Go\": \"$HBOGo#d\"')
+       	    .gsub!(/\"Discovery Plus\": \"Global TV\"/,'\"Discovery Plus\": \"$Discovery#d\"')
+       	    .gsub!(/\"DAZN\": \"Global TV\"/,'\"DAZN\": \"$DAZN#d\"')
        	    .gsub!(/\"Pornhub\": \"Global TV\"/,'\"Pornhub\": \"$Pornhub#d\"')
        	    .gsub!(/: \"Global TV\"/,': \"$GlobalTV#d\"')
        	    .gsub!(/: \"Asian TV\"/,': \"$AsianTV#d\"')
