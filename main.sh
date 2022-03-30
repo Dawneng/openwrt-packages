@@ -47,6 +47,7 @@ git clone --depth 1 https://github.com/Dawneng/openwrt-subconverter && mv -n ope
 
 
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
+svn co https://github.com/fw876/helloworld/trunk/v2raya
 # svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 svn co https://github.com/kenzok8/jell/trunk/luci-app-adguardhome
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-fileassistant
