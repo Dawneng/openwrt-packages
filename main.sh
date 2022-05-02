@@ -44,6 +44,7 @@ git clone -b dev --depth 1 https://github.com/vernesong/OpenClash && mv -n OpenC
 git clone -b packages --depth 1 https://github.com/xiaorouji/openwrt-passwall && mv -n openwrt-passwall/* ./ ; rm -rf openwrt-passwall
 git clone -b luci --depth 1 https://github.com/xiaorouji/openwrt-passwall && mv -n openwrt-passwall/* ./ ; rm -rf openwrt-passwall
 git clone --depth 1 https://github.com/Dawneng/openwrt-subconverter && mv -n openwrt-subconverter/* ./ ; rm -rf openwrt-subconverter
+git clone --depth 1 https://github.com/QiuSimons/openwrt-mos && mv -n openwrt-mos/luci-app-mosdns ./ ; rm -rf openwrt-mos
 
 
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
