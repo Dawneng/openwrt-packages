@@ -19,3 +19,7 @@ keyword:sgshort
 keyword:sgminorshort
 keyword:sgaxshort
 keyword:sgfindershort
+keyword:apple
+keyword:aaplimg
+keyword:itunes
+keyword:icloud
