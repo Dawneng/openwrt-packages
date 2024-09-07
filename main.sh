@@ -70,4 +70,5 @@ rm -rf ./*/Screenshots
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/*.md
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
+
 exit 0
